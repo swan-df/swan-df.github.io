@@ -17,15 +17,20 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-
+  
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="stylesheet" href="css/custom.css"> -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/skeleton.css">
 </head>
 <body>
 
@@ -33,18 +38,334 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>SWAN-DF</h4>
+        <h3 style="margin-top: 5%">SWAN-DF database of audio-video deepfakes</h3>
+        <!-- <div class="one-half column" style="margin-top: 25%"> -->
+        <div class="ten columns" text-align: center;>
+            <!-- <div class="col"> -->
         <p>We present SWAN-DF database of high quality audio-visual deepfake that pose a 
             high threat to state of the art speaker and face verification systems. 
-            We also generated more than 20 face swapping variants using the combination 
-            of different models and blending techniques. We also used 8 different 
-            voice conversion methods from 5 different models to generate voice deepfakes. </a>.</p>
+            We selected 46 different identities from a publicly available 
+            <a href="https://www.idiap.ch/en/dataset/swan">SWAN database</a>
+            and manually matched 60 pairs of people for face swapping process.
+            For face swapping, we used several tuned models from 
+            <a href="https://github.com/iperov/DeepFaceLab">DeepFaceLab</a> and for voice conversion a 
+            tuned model from <a href="https://github.com/OlaWod/FreeVC">FreeVC</a>.
+            We generated more than 20 face swapping variants using the combination 
+            of different models and blending techniques. </p>
+        <p>In this demo, for each pair of original videos, we show 4 examples of deepfake variants 
+            where the faces and voices of the original identities are swapped. Below the videos, 
+            we show other examples of audio deepfakes generated using original utterances from 
+            <a href="https://www.openslr.org/60/">LibriTTS</a>.</p>
       </div>
     </div>
-  </div>
 
+    <div class="row">
+        <h5>SWAN-DF example pair 1</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair1/4_00040_m_01_01_t_2.mp4" title="Original source video"></iframe>
+                    <!-- <h5 class="card-title">Original source video</h5> -->
+                    <p class="card-text">Original source video</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair1/4_00049_m_01_01_t_2.mp4" title="Original target speaker"></iframe>
+                    <!-- <h5 class="card-title">Original target speaker</h5> -->
+                    <p class="card-text">Original target speaker</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair1/4_00040_m_01_01_t_2-d320m4o4e15b150r7-00040-to-00049-vc.mp4" title="High quality swap"></iframe>
+                    <!-- <h6 class="card-title">High quality swap, model 320px</h6> -->
+                    <p class="card-text">Deepfake, 320px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair1/4_00040_m_01_01_t_2-model_256d_mask_nomkl-merged-m4o4e15b150r7-to-00049-vc.mp4" title="Deepfake, 256px face, FreeVC audio"></iframe>
+                    <!-- <h5 class="card-title">Video 4</h5> -->
+                    <p class="card-text">Deepfake, 256px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair1/4_00040_m_01_01_t_2-mergedlowq-to-00049-vc.mp4" title="Video 4"></iframe>
+                    <!-- <h5 class="card-title">Video 4</h5> -->
+                    <p class="card-text">Deepfake, 160px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair1/4_00040_m_01_01_t_2-model_sset_mask_nomkl-merged-m2s1-to-00049-vc.mp4" title="Video 4"></iframe>
+                    <!-- <h5 class="card-title">Video 4</h5> -->
+                    <p class="card-text">Deepfake, 160px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+    <h5>SWAN-DF example pair 2</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair2/4_00002_f_01_01_t_2.mp4" title="Original source video"></iframe>
+                    <!-- <h5 class="card-title">Original source video</h5> -->
+                    <p class="card-text">Original source video</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair2/4_00015_f_01_01_t_2.mp4" title="Original target speaker"></iframe>
+                    <!-- <h5 class="card-title">Original target speaker</h5> -->
+                    <p class="card-text">Original target speaker</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair2/4_00002_f_01_01_t_2-d320m4o4e15b150r7-00002-to-00015-vc.mp4" title="High quality swap"></iframe>
+                    <!-- <h6 class="card-title">High quality swap, model 320px</h6> -->
+                    <p class="card-text">Deepfake, 320px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair2/4_00002_f_01_01_t_2-d256m4o1e15b150r7-00002-to-00015-vc.mp4" title="Deepfake, 256px face, FreeVC audio"></iframe>
+                    <!-- <h5 class="card-title">Video 4</h5> -->
+                    <p class="card-text">Deepfake, 256px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair2/4_00002_f_01_01_t_2-mergedlowq-to-00015-vc.mp4" title="Video 4"></iframe>
+                    <!-- <h5 class="card-title">Video 4</h5> -->
+                    <p class="card-text">Deepfake, 160px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair2/4_00002_f_01_01_t_2-model_sset_mask_nomkl-merged-m2s1-to-00015-vc.mp4" title="Video 4"></iframe>
+                    <!-- <h5 class="card-title">Video 4</h5> -->
+                    <p class="card-text">Deepfake, 160px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h5>SWAN-DF example pair 3</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair3/4_00001_m_01_01_t_2.mp4" title="Original source video"></iframe>
+                    <!-- <h5 class="card-title">Original source video</h5> -->
+                    <p class="card-text">Original source video</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair3/4_00006_m_01_01_t_2.mp4" title="Original target speaker"></iframe>
+                    <!-- <h5 class="card-title">Original target speaker</h5> -->
+                    <p class="card-text">Original target speaker</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair3/4_00001_m_01_01_t_2-d320m4o4e15b150r7-00001-to-00006-vc.mp4" title="High quality swap"></iframe>
+                    <!-- <h6 class="card-title">High quality swap, model 320px</h6> -->
+                    <p class="card-text">Deepfake, 320px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair3/4_00001_m_01_01_t_2-d256m4o4e15b150r7-00001-to-00006-vc.mp4" title="Deepfake, 256px face, FreeVC audio"></iframe>
+                    <!-- <h5 class="card-title">Video 4</h5> -->
+                    <p class="card-text">Deepfake, 256px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair3/4_00001_m_01_01_t_2-mergedlowq-to-00006-vc.mp4" title="Video 4"></iframe>
+                    <!-- <h5 class="card-title">Video 4</h5> -->
+                    <p class="card-text">Deepfake, 160px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <iframe width="100%" height="400" src="videos/pair3/4_00001_m_01_01_t_2-model_sset_mask_nomkl-merged-m2s1-to-00006-vc.mp4" title="Video 4"></iframe>
+                    <!-- <h5 class="card-title">Video 4</h5> -->
+                    <p class="card-text">Deepfake, 160px face, FreeVC audio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <h3 style="margin-top: 5%">LibriTTS-DF Samples</h3>
+
+        <!-- <h2 id="librispeech-samples" style="text-align: center;">LibriTTS-DF Samples</h2> -->
+            <div class="table-responsive pt-3">
+                <table class="table table-hover pt-2">
+                <thead>
+                <tr>
+                <th style="text-align: center">Text</th>
+                <th style="text-align: center">Ground Truth</th>
+                <th style="text-align: center">Adaspeech</th>
+                <th style="text-align: center">Tortoise</th>
+                <th style="text-align: center">Voice convertsion, YourTTS</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td style="text-align: left;vertical-align:middle;width: 600px">Also, a popular contrivance whereby love-making may be suspended but not stopped during the picnic season.</td>
+                <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-121-original.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-121-original.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-121-tts-tortoise-diffusion.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-1188-to-121-voice-conversion.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+    </div>
+    
+
+  </div>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
+
+
+
+
+
+
+
+
+<!-- <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>3x3 Video Grid</h1>
+                <p>Here are some videos for you to enjoy!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1"></iframe>
+                        <h5 class="card-title">Video 1</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada vel velit a efficitur. Suspendisse a malesuada nunc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 2"></iframe>
+                        <h5 class="card-title">Video 2</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada vel velit a efficitur. Suspendisse a malesuada nunc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 3"></iframe>
+                        <h5 class="card-title">Video 3</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada vel velit a efficitur. Suspendisse a malesuada nunc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 4"></iframe>
+                        <h5 class="card-title">Video 4</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada vel velit a efficitur. Suspendisse a malesuada nunc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <iframe width="100%" height="200
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 5"></iframe>
+                        <h5 class="card-title">Video 5</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada vel velit a efficitur. Suspendisse a malesuada nunc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 6"></iframe>
+                        <h5 class="card-title">Video 6</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada vel velit a efficitur. Suspendisse a malesuada nunc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+ -->
