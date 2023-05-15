@@ -52,15 +52,17 @@
             tuned model from <a href="https://github.com/OlaWod/FreeVC">FreeVC</a>.
             We generated more than 20 face swapping variants using the combination 
             of different models and blending techniques. </p>
-        <p>In this demo, for each pair of original videos, we show 4 examples of deepfake variants 
-            where the faces and voices of the original identities are swapped. Below the videos, 
-            we show other examples of audio deepfakes generated using original utterances from 
+        <p>For each pair of original videos, <a href="#swandf">you can see</a> 4 examples of deepfake variants 
+            where the faces and voices of the original identities are swapped. 
+            <a href="#libritts">Below you can also listen</a> 
+            to other examples of audio-only deepfakes generated using original utterances from 
             <a href="https://www.openslr.org/60/">LibriTTS</a>.</p>
       </div>
     </div>
 
+    <section id="swandf">
     <div class="row">
-        <h5>SWAN-DF example pair 1</h3>
+        <h5 style="margin-top: 5%">SWAN-DF deepfakes for swap pair  1</h3>
     </div>
     <div class="row">
         <div class="col-sm-4">
@@ -123,7 +125,7 @@
 
 
     <div class="row">
-    <h5>SWAN-DF example pair 2</h3>
+    <h5 style="margin-top: 5%">SWAN-DF deepfakes for swap pair  2</h3>
     </div>
     <div class="row">
         <div class="col-sm-4">
@@ -185,7 +187,7 @@
     </div>
 
     <div class="row">
-        <h5>SWAN-DF example pair 3</h3>
+        <h5 style="margin-top: 5%">SWAN-DF deepfakes for swap pair  3</h3>
     </div>
     <div class="row">
         <div class="col-sm-4">
@@ -245,36 +247,65 @@
             </div>
         </div>
     </div>
+</section>
 
 
 
 
+    <section id="libritts">
     <div class="row">
         <h3 style="margin-top: 5%">LibriTTS-DF Samples</h3>
-
+        <div class="ten columns" text-align: center;>
+            <!-- <div class="col"> -->
+        <p>Compare the voices of original speakers from <a href="https://www.openslr.org/60/">LibriTTS dataset</a>
+            with three selected voice deepfakes generated using 
+            adapted <a href="https://arxiv.org/pdf/2103.00993.pdf">Adaspeech</a>, 
+            tuned <a href="https://github.com/neonbjb/tortoise-tts">TorToiSe</a>, and zero-shot model 
+            <a href="https://github.com/Edresson/YourTTS">YourTTS</a> used in voice convertion capacity.</p>
+      </div>
+    </div>
+    <div class="row">
         <!-- <h2 id="librispeech-samples" style="text-align: center;">LibriTTS-DF Samples</h2> -->
             <div class="table-responsive pt-3">
                 <table class="table table-hover pt-2">
                 <thead>
                 <tr>
-                <th style="text-align: center">Text</th>
+                <th style="text-align: center">Text (speaker ID: 121)</th>
                 <th style="text-align: center">Ground Truth</th>
                 <th style="text-align: center">Adaspeech</th>
-                <th style="text-align: center">Tortoise</th>
-                <th style="text-align: center">Voice convertsion, YourTTS</th>
+                <th style="text-align: center">TorToiSe</th>
+                <th style="text-align: center">YourTTS (1188 to 121)</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr><td style="text-align: left;vertical-align:middle;width: 600px">Also, a popular contrivance whereby love-making may be suspended but not stopped during the picnic season.</td>
+                <tr><td style="text-align: left;vertical-align:middle;width: 500px">Also, a popular contrivance whereby love-making may be suspended but not stopped during the picnic season.</td>
                 <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-121-original.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-                <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-121-original.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-121-tts-Adaspeech.wav" autoplay/>Your browser does not support the audio element.</audio></td>
                 <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-121-tts-tortoise-diffusion.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-                <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-1188-to-121-voice-conversion.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/libritts-1188-to-121-voice-conversion.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                <th style="text-align: center">Text (speaker ID: 1188)</th>
+                <th style="text-align: center">Ground Truth</th>
+                <th style="text-align: center">Adaspeech</th>
+                <th style="text-align: center">TorToiSe</th>
+                <th style="text-align: center">YourTTS (121 to 1188)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td style="text-align: left;vertical-align:middle;width: 500px">You see how doubly, how intimately, opposed the ideas are; yet how difficult to explain without apparent contradiction.</td>
+                <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-1188-original.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-1188-tts-Adaspeech.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                <td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/libritts-1188-tts-tortoise-diffusion.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/libritts-121-to-1188-voice-conversion.wav" autoplay/>Your browser does not support the audio element.</audio></td>
                 </tr>
                 </tbody>
                 </table>
             </div>
     </div>
+    </section>
     
 
   </div>
