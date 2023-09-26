@@ -39,19 +39,33 @@
   <div class="container">
     <div class="row">
         <h3 style="margin-top: 5%">SWAN-DF database of audio-video deepfakes</h3>
+        <div class="row">
+            <div class="col-sm-4">
+                        [<a href="https://publications.idiap.ch/publications/show/5092">Paper</a>] 
+            </div>
+            <div class="col-sm-4">
+                        [<a href="https://www.idiap.ch/en/dataset/swan-df">Download Database</a>]
+            </div>
+            <div class="col-sm-4">
+                        [<a href="https://gitlab.idiap.ch/bob/paper.ijcb2023.av-deepfakes">Source Code</a>]
+            </div>
+        </div>
+    <p></p>            
         <!-- <div class="one-half column" style="margin-top: 25%"> -->
         <div class="ten columns" text-align: center;>
             <!-- <div class="col"> -->
-        <p>We present SWAN-DF database of high quality audio-visual deepfake that pose a 
-            high threat to state of the art speaker and face verification systems. 
-            We selected 46 different identities from a publicly available 
-            <a href="https://www.idiap.ch/en/dataset/swan">SWAN database</a>
-            and manually matched 60 pairs of people for face swapping process.
-            For face swapping, we used several tuned models from 
-            <a href="https://github.com/iperov/DeepFaceLab">DeepFaceLab</a> and for voice conversion a 
-            tuned model from <a href="https://github.com/OlaWod/FreeVC">FreeVC</a>.
-            We generated more than 20 face swapping variants using the combination 
-            of different models and blending techniques. </p>
+        <p>
+            SWAN-DF is the first high fidelity publicly available dataset of realistic audio-visual deepfakes, 
+            where both faces and voices appear and sound like the target person. The SWAN-DF dataset is based on the public 
+            <a href="https://www.idiap.ch/en/dataset/swan">SWAN database</a> of real videos recorded in HD on iPhone and iPad Pro (in year 2019). 
+            For 30 pairs of manually selected people from SWAN, we swapped faces and voices using several autoencoder-based 
+            face swapping models and using several blending techniques from the well-known open source repo 
+            <a href="https://github.com/iperov/DeepFaceLab">DeepFaceLab</a> and voice conversion (or voice cloning) methods, 
+            including zero-shot <a href="https://github.com/Edresson/YourTTS">YourTTS</a>, 
+            <a href="https://github.com/huawei-noah/Speech-Backbones/tree/main/DiffVC">DiffVC</a>, 
+            <a href="https://github.com/tinkoff-ai/hifi_vc">HiFiVC</a>, 
+            and several tuned models from <a href="https://github.com/OlaWod/FreeVC">FreeVC</a>. 
+
         <p>For each pair of people, <a href="#swandf">you can see</a>  their original videos and four deepfake variants 
             where the faces and voices of the identities are swapped.
             After that, <a href="#libritts">you can listen</a> 
